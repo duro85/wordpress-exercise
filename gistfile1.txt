@@ -1,0 +1,87 @@
+<!--
+Partendo dal seguente HTML scrivere termite codice Javascipt (no librerie, pure vanilla JS) che permetta le seguenti interazioni: 
+
+• Il click sul link “remove” di ogni riga deve rimuovere la riga
+• Il click sul link “remove selected” deve rimuovere le righe selezionate
+• Il click sulla checkbox all’interno dell’header della tabella deve selezionare/deselezionare tutte le righe
+-->
+
+<table class="products">
+    <thead>
+      <tr>
+        <th class="selection">
+          <input class="selection" type="checkbox" />
+        </th>
+        <th class="sku">SKU</th>
+        <th class="qty">Qty</th>
+        <th class="price">Price</th>
+        <th class="actions">
+          <button data-action="remove-action">Remove selected</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="product">
+        <td class="selection">
+          <input class="selection" type="checkbox" />
+        </td>
+        <td class="sku">X_Y_Z</td>
+        <td class="qty">1</td>
+        <td class="price">125,00</td>
+        <td class="actions">
+					<button data-action="remove-action">Remove</button>
+        </td>
+      </tr>
+      <tr class="product">
+        <td class="selection">
+          <input class="selection" type="checkbox" />
+        </td>
+        <td class="sku">X_Y_Z</td>
+        <td class="qty">1</td>
+        <td class="price">125,00</td>
+        <td class="actions">
+          <button data-action="remove-action">Remove</button>
+        </td>
+      </tr>
+      <tr class="product">
+        <td class="selection">
+          <input class="selection" type="checkbox" />
+        </td>
+        <td class="sku">X_Y_A</td>
+        <td class="qty">2</td>
+        <td class="price">125,00</td>
+        <td class="actions">
+         <button data-action="remove-action">Remove</button>
+        </td>
+      </tr>
+      <tr class="product">
+        <td class="selection">
+          <input class="selection" type="checkbox" />
+        </td>
+        <td class="sku">X_Y_B</td>
+        <td class="qty">1</td>
+        <td class="price">152,00</td>
+        <td class="actions">
+          <button data-action="remove-action">Remove</button>
+        </td>
+      </tr>
+      <tr class="product">
+        <td class="selection">
+          <input class="selection" type="checkbox" />
+        </td>
+        <td class="sku">X_Z_Z</td>
+        <td class="qty">1</td>
+        <td class="price">125,00</td>
+        <td class="actions">
+          <button data-action="remove-action">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- 
+****** BONUS POINT ****************************************************************
+Dato il codice di partenza, clonare per 3 volte la stessa tabella e senza modificarne il markup (no aggiunta di ID o identificatori univoci nel codice html) creare una classe in JS che 
+permetta di manipolare ed integragire in maniera puntuale ed indipendente su una singola tabella in maniera indipendente dalle altre.
+
+-->
